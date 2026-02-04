@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+     background: #000000;
+     font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+ }
+
+/* Sezione panel */
+.panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    margin-bottom: 0px;
+ }
+
+ .panel img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+     object-fit: cover;
+     display: block;
+    border-radius: 0px;
+ }
+
+/* Sezioni contenuto */
+.div1 {
+    display: flex;
+    align-items: center;
+     gap: 0px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+ }
+ 
+.div1 img {
+     width: 100%;
+    max-width: 450px;
+    height: auto;
+     object-fit: cover;
+     display: block;
+    border-radius: 0px;
+    flex-shrink: 0;
+}
+
+.div1 h2,
+.div1 p {
+    font-family: "Impact", "Arial Black", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 48px;
+    color: #ffffff;
+    flex: 1;
+    min-width: 250px;
+    line-height: 1.2;
+}
+
+.div1 p {
+    font-size: 36px;
+}
+
+/* Tablet: regolazioni */
+@media (max-width: 1024px) {
+    .div1 {
+        gap: 0px;
+    }
+
+    .div1 img {
+        max-width: 300px;
+    }
+
+    .div1 h2,
+    .div1 p {
+        font-size: 36px;
+    }
+
+    .div1 p {
+        font-size: 28px;
+    }
+}
+
+/* Tablet piccolo/grande mobile */
+ @media (max-width: 768px) {
+    body {
+        padding: 0px;
+     }
+
+     .panel {
+        margin-bottom: 30px;
+     }
+
+     .panel img {
+        max-height: 300px;
+    }
+
+    .div1 {
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 0px;
+    }
+
+    .div1 img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .div1 h2,
+    .div1 p {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .div1 p {
+        font-size: 22px;
+     }
+ }
+ 
+/* Mobile piccolo */
+ @media (max-width: 480px) {
+    body {
+        padding: 0px;
+     }
+
+     .panel {
+        margin-bottom: 0px;
+        gap: 0px;
+     }
+
+     .panel img {
+        max-height: 200px;
+    }
+
+    .div1 {
+        margin-bottom: 20px;
+        gap: 0px;
+    }
+
+    .div1 h2,
+    .div1 p {
+        font-size: 35px;
+    }
+
+    .div1 p {
+        font-size: 16px;
+     }
+ }
